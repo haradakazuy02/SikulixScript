@@ -21,7 +21,7 @@ object SikulixScript {
         }
       }
       if (n >= args.size) {
-        println("SikulixScript (options) [scala/javascript]");
+        println("SikulixScript (options) [scala/javascript/python]");
         println("(options)");
         println(" -init [script] : run the script string before running a script file.");
         println(" -script [file] : run the script in [file].");
@@ -59,6 +59,7 @@ object SikulixScript {
         _this.eval("function wait(target,timeout) { if (timeout == undefined) return _screen.wait(target); else return _screen.wait(new org.sikuli.script.Pattern(target),timeout);}");
         _this.eval("function wheel(target,direction,steps,stepDelay) { if (direction == undefined) return _screen.wheel(target); else if (steps == undefined) return _screen.wheel(target,direction); else if (stepDelay == undefined) return _screen.wheel(target,direction,steps); else return _screen.wheel(target,direction,steps,stepDelay);}");
         _this.eval("function userCapture(msg) { if (msg == undefined) return _screen.userCapture(); else return _screen.userCapture(msg);}");
+      case _ =>
       }
       if (scriptfile != null) _this.run(new BufferedReader(new FileReader(scriptfile))) match {
         case ScriptOK => //
