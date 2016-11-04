@@ -28,7 +28,7 @@ object SikulixScript {
         println(" -i : interpret after script.");
         System.exit(1);
       }
-      // ‚È‚º‚©scala script‚Å‚¢‚«‚È‚ènew Screen‚·‚é‚Æ
+      // If it was not define screen, it would occur when new Screen : 
       // java.lang.UnsatisfiedLinkError: org.sikuli.util.SysJNA$WinKernel32.
       // GetEnvironmentVariableW(Lorg/bridj/Pointer;Lorg/bridj/Pointer;I)I
       val screen = new Screen;

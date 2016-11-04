@@ -1,4 +1,4 @@
 @echo off
 setlocal
-call %~dp0target\pack\bin\sikulix-script %*
+java -cp %~dp0target\universal\stage\lib\*; jp.gr.java_conf.harada.SikulixScript %*
 endlocal

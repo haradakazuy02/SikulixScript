@@ -1,6 +1,6 @@
 @echo off
 if "%1"=="" goto help
-java -cp %~dp0target\pack\lib\*; org.sikuli.script.Sikulix %*
+java -cp %~dp0target\universal\stage\lib\*; org.sikuli.script.Sikulix %*
 goto end
 
 :help
